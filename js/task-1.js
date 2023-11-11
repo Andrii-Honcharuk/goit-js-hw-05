@@ -1,17 +1,65 @@
-function isEnoughCapacity(products, containerSize){
-let sum = 0;
+// const getUserNames = (users) => {
+//     const usernames = [];
+//     users.forEach(user => {
+//         usernames.push(user.name)
+//     });
+//    return usernames;
+//   };
 
-for (const product in products) {
-    sum += products[product];
-}
-return sum <= containerSize;
-}
+const getUserNames = (users) => {
+    return users.map((user) => user.name)};
 
-console.log("------task-1----");
-console.log(isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)); // true
+
+/*
+const names = students.map(student => student.name);
+console.log(names); // ["Mango", "Poly", "Ajax", "Kiwi", "Houston"]
+
   
-console.log(isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)); // false
   
-console.log(isEnoughCapacity({ apples: 1, lime: 5, tomatos: 3 }, 14)); // true
   
-console.log(isEnoughCapacity({ apples: 18, potatos: 5, oranges: 2 }, 7)); // false
+  Задача 1. Імена користувачів
+  Напиши стрілочну функцію getUserNames(users), яка прийматиме один параметр users — масив об’єктів користувачів. Функція має повертати масив імен усіх користувачів (властивість name) із масиву users.
+  
+  Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її викликів. */
+  console.log("----- task-1 -----");
+
+  console.log(
+    getUserNames([
+    {
+      name: "Moore Hensley",
+      email: "moorehensley@indexia.com",
+      balance: 2811
+    },
+    {
+      name: "Sharlene Bush",
+      email: "sharlenebush@tubesys.com",
+      balance: 3821
+    },
+    {
+      name: "Ross Vazquez",
+      email: "rossvazquez@xinware.com",
+      balance: 3793
+    },
+    {
+      name: "Elma Head",
+      email: "elmahead@omatom.com",
+      balance: 2278
+    },
+    {
+      name: "Carey Barr",
+      email: "careybarr@nurali.com",
+      balance: 3951
+    },
+    {
+      name: "Blackburn Dotson",
+      email: "blackburndotson@furnigeer.com",
+      balance: 1498
+    },
+    {
+      name: "Sheree Anthony",
+      email: "shereeanthony@kog.com",
+      balance: 2764
+    },
+  ])
+  ); 
+  // ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
